@@ -1,2 +1,16 @@
-Telegram.WebApp.ready();
-Telegram.WebApp.expand();
+document.addEventListener("DOMContentLoaded", () => {
+  Telegram.WebApp.ready();
+  Telegram.WebApp.expand();
+
+  let clicked = false;
+
+  document.body.addEventListener("click", () => {
+    if (clicked) {
+      Telegram.WebApp.HapticFeedback.notificationOccurred("error");
+    } else {
+      Telegram.WebApp.HapticFeedback.notificationOccurred("success");
+    }
+
+    clicked = !clicked;
+  });
+});
