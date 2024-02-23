@@ -64,11 +64,11 @@
                 this.head = new Shape.Ellipse({
                     center: [0, 0],
                     size: [13, 8],
-                    fillColor: 'var(--tg-theme-text-color)'
+                    fillColor: Telegram.WebApp.themeParams.text_color
                 });
 
                 this.path = new Path({
-                    strokeColor: 'var(--tg-theme-text-color)',
+                    strokeColor: Telegram.WebApp.themeParams.text_color,
                     strokeWidth: 2,
                     strokeCap: 'round'
                 });
@@ -76,7 +76,7 @@
                     this.path.add(new Point());
 
                 this.shortPath = new Path({
-                    strokeColor: 'var(--tg-theme-text-color)',
+                    strokeColor: Telegram.WebApp.themeParams.text_color,
                     strokeWidth: 4,
                     strokeCap: 'round'
                 });
