@@ -261,6 +261,11 @@
         }
 
         function onMouseDown(event) {
+            if (groupTogether) {
+                Telegram.WebApp.HapticFeedback.notificationOccurred("error");
+              } else {
+                Telegram.WebApp.HapticFeedback.notificationOccurred("success");
+              }
             groupTogether = !groupTogether;
         }
 
