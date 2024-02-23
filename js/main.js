@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let clicked = false;
 
-  document.body.addEventListener("click", () => {
+  document.querySelector("canvas").addEventListener("click", () => {
     if (clicked) {
       Telegram.WebApp.HapticFeedback.notificationOccurred("error");
     } else {
